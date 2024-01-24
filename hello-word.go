@@ -11,5 +11,3 @@ func main() {
 	fmt.Println("Hello, World!") // Utiliza a função Println do pacote fmt para imprimir a string "Hello, World!"
 }
 
-// Execulta arquivo no terminal
-// go run hello-world.go

@@ -47,3 +47,11 @@
 Por padrão essa pasta deve ser chamada go e deve ficar na raiz do nosso usuário.
 
 O Go Workspace deve possuir três pastas. A primeira delas é a pkg, onde ficará os pacotes compartilhados das nossas aplicações, pois o Go é uma linguagem bastante modular, dependendo de pacotes que vamos importando no nosso código.Também deve ter a pasta src, onde escreveremos o código fonte de cada aplicação, e a pasta bin, onde ficará os compilados do nosso código Go.
+
+#### Executando um programa em Go
+
+- go build name-file.go
+    Com isso nosso código sera compilado e será criado um executável
+
+- go run name-file.go
+    Já compila e execulta
