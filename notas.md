@@ -7,6 +7,7 @@
 - Conhecido pela legibilidade e usabilidade (como Python).
 
 # Instalando no Linux
+
     1 - Baixa o pacote go
         - wget https://golang.org/dl/go1.17.linux-amd64.tar.gz
 
@@ -20,11 +21,12 @@
 
     4 - Atualizando sua var de ambiente
         - source ~/.profile
-    
+
     5 - Verifique a instalação
         - go version
 
 # Desistalando
+
     1 - Remova o diretório de instalação
         - sudo rm -rf /usr/local/go
 
@@ -37,4 +39,11 @@
         - source ~/.profile
 
 #### Link doc
+
 - https://go.dev/doc/
+
+#### Go Workspace
+
+Por padrão essa pasta deve ser chamada go e deve ficar na raiz do nosso usuário.
+
+O Go Workspace deve possuir três pastas. A primeira delas é a pkg, onde ficará os pacotes compartilhados das nossas aplicações, pois o Go é uma linguagem bastante modular, dependendo de pacotes que vamos importando no nosso código.Também deve ter a pasta src, onde escreveremos o código fonte de cada aplicação, e a pasta bin, onde ficará os compilados do nosso código Go.
