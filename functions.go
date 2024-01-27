@@ -11,6 +11,20 @@ func main(){
 
 	fmt.Println("resp ", resp)
 
+	band, album, year := favorites()
+	fmt.Println(band)
+	fmt.Println(album)
+	fmt.Println(year)
+
+}
+
+// Function para retorna dois ou mais valores
+func favorites() (string,string, int) {
+	nameBand := "The Beatles"
+	nameAlbum := "Let it be"
+	ano := 1969
+
+	return nameBand, nameAlbum, ano
 }
 
 
