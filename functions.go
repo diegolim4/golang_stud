@@ -11,10 +11,10 @@ func main(){
 
 	fmt.Println("resp ", resp)
 
-	band, album, year := favorites()
+	band, album, _ := favorites() // Para ignora um valor retornado usamos _
 	fmt.Println(band)
 	fmt.Println(album)
-	fmt.Println(year)
+	// fmt.Println(year)
 
 }
 
