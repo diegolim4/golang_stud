@@ -117,7 +117,8 @@ func crateAndWriteInFile(text string){
         fmt.Println("Ocorreu um erro:", err)
     }
 
-	file.WriteString(text + "\n")
+	
+	file.WriteString(getTimeNow()+" - " + text + "\n")
 
 	file.Close()
 }
@@ -129,4 +130,17 @@ func arrTexts()[]string{
 
 	return texts
 
+}
+
+func getTimeNow()string{
+	/* 
+		Para formatar a data em Go precisamos usar a constantes definidas na documentação:
+
+		Doc: https://go.dev/src/time/format.go
+
+	*/
+
+	now := time.Now().Format("02/01/2006 15:04:05") // Const para pegar a data e hora atual
+
+	return now
 }

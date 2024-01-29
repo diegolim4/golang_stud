@@ -1,3 +1,8 @@
-Olá Mundo!
-Estou estudando Golang
-Tudo bem com vocês?
+29/01/2024 11:06:00 - Olá Mundo!
+29/01/2024 11:06:03 - Estou estudando Golang
+29/01/2024 11:06:06 - Tudo bem com vocês?
+29/01/2024 11:06:09 - Por aqui esta ok
+29/01/2024 11:13:24 - Olá Mundo!
+29/01/2024 11:13:27 - Estou estudando Golang
+29/01/2024 11:13:30 - Tudo bem com vocês?
+29/01/2024 11:13:33 - Por aqui esta ok
