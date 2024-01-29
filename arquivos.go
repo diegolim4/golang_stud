@@ -7,6 +7,7 @@ import (
 	"bufio" // Essa pacote nos ajuda a ler os conteudo dos arquivos linha a linha
 	"io"
 	"strings"
+	"time"
 )	
 
 func main(){
@@ -14,7 +15,16 @@ func main(){
 
 	// readFileIoutil()
 
-	readFileBufio()
+	// readFileBufio()
+
+	arrTexts := arrTexts()
+
+	for _, text := range arrTexts {
+		crateAndWriteInFile(text)
+		
+		time.Sleep(3 * time.Second)
+	}
+
 }
 
 func readFileOs(){
@@ -79,4 +89,44 @@ func readFileBufio(){
 	
 	// Se abrimos um arquivo com os.Open, após lê-lo, é uma boa prática fechá-lo com a função Close()
 	resFile.Close()
+}
+
+func crateAndWriteInFile(text string){
+	/* 
+		Primeiro iremos usar umas funções do os para criar um arquivo caso não exista
+
+		OpenFile - Função do os para o Go criar o arquivo. Ela receve três parâmetros
+			- Nome do arquivo
+			- Flag para representar o que fazer com o arquivo
+			- Tipo de permissão
+			- Documentação: (doc: https://pkg.go.dev/os#pkg-constants)
+
+		O_RDWR - Flag do OpenFile para ler e escrever no arquivo
+
+		O_Create - Flag do OpenFile para criar um arquivo
+
+		O_Append - Flag para que o texto seja escrito ao final do arquivo(Evita sobrescrever)
+
+		0666 - Permisão para ler e escrever no arquivo
+
+	*/
+
+	file, err := os.OpenFile("text.txt", os.O_RDWR | os.O_CREATE | os.O_APPEND, 0666) 
+
+	if err != nil {
+        fmt.Println("Ocorreu um erro:", err)
+    }
+
+	file.WriteString(text + "\n")
+
+	file.Close()
+}
+
+func arrTexts()[]string{
+	texts := []string{}
+
+	texts = append(texts, "Olá Mundo!", "Estou estudando Golang", "Tudo bem com vocês?", "Por aqui esta ok")
+
+	return texts
+
 }
